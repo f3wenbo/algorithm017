@@ -45,6 +45,7 @@
 // @lc code=start
 class Solution {
 public:
+    // T:O(N*KlogK) S:O(N)
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
         vector<vector<string>> ans;
         int idx = 0;

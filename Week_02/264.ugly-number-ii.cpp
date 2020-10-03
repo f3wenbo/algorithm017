@@ -37,6 +37,7 @@
 // @lc code=start
 class Solution {
 public:
+    // T:O(N) S:O(N)
     int nthUglyNumber(int n) {
         vector<int> dp(n, 0);
         dp[0] = 1;

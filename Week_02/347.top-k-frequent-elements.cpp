@@ -46,6 +46,7 @@
 // @lc code=start
 class Solution {
 public:
+    // T:O(N) S:O(N)
     vector<int> topKFrequent(vector<int>& nums, int k) {
         unordered_map<int, int> count;
         for (auto num : nums)

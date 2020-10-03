@@ -84,6 +84,7 @@
  */
 class Solution {
 public:
+    // T:O(N) S:O(N)
     vector<int> preorderTraversal(TreeNode* root) {
         vector<int> ans;
         function<void(TreeNode*)> preorder = [&](TreeNode* t) {

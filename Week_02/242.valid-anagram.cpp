@@ -42,11 +42,26 @@
 // @lc code=start
 class Solution {
 public:
-    bool isAnagram(string s, string t) {
+    // T:O(Nlog) S:O(1)
+    bool isAnagram1(string s, string t) {
         sort(s.begin(), s.end());
         sort(t.begin(), t.end());
-        if (s == t) return true;
-        return false;
+        return s == t;
+    }
+    // T:O(N) S:O(1)
+    bool isAnagram2(string s, string t) {
+        if (s.size() != t.size()) return false;
+        
+        vector<int> alphas(26, 0);
+        for (int i = 0; i < s.size(); ++i) {
+            alphas[s[i] - 'a']++;
+            alphas[t[i] - 'a']--;
+        }
+        for (auto a : alphas) {
+            if (a != 0) return false;
+        }
+
+        return true;
     }
 };
 // @lc code=end

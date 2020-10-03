@@ -77,6 +77,7 @@ public:
 
 class Solution {
 public:
+    // T:O(N) S:O(N)
     vector<int> preorder(Node* root) {
         vector<int> ans;
 
